@@ -1,0 +1,8 @@
+## Riverbed Steelhead Forwarder Component - metadata/default.meta
+
+[props]
+export = system
+
+[transforms]
+export = system
+
