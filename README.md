@@ -7,7 +7,7 @@ Splunk for Riverbed Steelhead - Technology Add-On
 
 This is a self-contained Splunk application which parses log information for the interesting fields returned by the Riverbed Steelhead equipment.  Specifically, it looks for log lines which roughly match the following:
 
-[component.LOGLEVEL] (- | a digit)
+process(optional [processID]): [component.LOGLEVEL]
 
 Log lines that match this expression are assigned a sourcetype of "riverbed_steelhead".
 
@@ -41,3 +41,5 @@ As an option, local\props.conf.md can be copied to local\props.conf if you would
 --[ Acknowledgements ]--
 
 This application was created with the generous support of American Tower Corporation.
+
+Application icon by flakshak - http://flakshack.deviantart.com
