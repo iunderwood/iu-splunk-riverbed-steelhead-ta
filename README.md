@@ -27,4 +27,17 @@ $SPLUNK_HOME\etc\deployment_apps
 
 --[ Configuration ]--
 
-Some Riverbed devices can become extremely chatty when logging at the INFO level (i.e. a central Steelhead).
+A small collection of Steelhead devices logging on an INFO level will generate a metric ton of traffic.  This can very easily clog the Main index, and cripple performance for the userbase as a whole.
+
+Do not neglect the possible performance impact on both the Steelhead and the network with this level of logging.  If may be beneficial to deploy universal forwarders at sites with remote units so that compression and reliable TCP transmission are available.
+
+If this idea is appealing to you, it is advisable to create another index "riverbed_info" to keep these indexes.  Retention time is up to the administrator.  However, general usage scenarios (i.e. no reported problems with optimization) suggest that the indexes can be cleaned up and discarded after 7-14 days.
+
+Please refer to the Admin Manual which discusses how to set up the index as well as its rate of decay.
+
+As an option, local\props.conf.md can be copied to local\props.conf if you would like to forward INFO logs to a separate, more rapidly-decaying index.
+
+
+--[ Acknowledgements ]--
+
+This application was created with the generous support of American Tower Corporation.
