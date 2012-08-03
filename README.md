@@ -40,6 +40,4 @@ As an option, local\props.conf.md can be copied to local\props.conf if you would
 
 --[ Acknowledgements ]--
 
-This application was created with the generous support of American Tower Corporation.
-
 Application icon by flakshak - http://flakshack.deviantart.com
